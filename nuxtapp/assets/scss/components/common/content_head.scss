@@ -1,0 +1,96 @@
+.content_head{
+  padding: 0 20px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #F5F5F5;
+  position: relative;
+  border-bottom:1px solid $global-border;
+  .head_left_content{
+    position: absolute;
+    left: 20px;
+    top:0;
+  }
+  .head_menu_content{
+    padding: 0 40px;
+    width: 850px;
+    margin: 0 auto;
+
+    li{
+      float: left;
+      margin: 0 20px;
+      a{
+        display: block;
+        position: relative;
+        height: 50px;
+        color: #4C5C6F;
+        //border-bottom: 3px solid transparent;
+        transition: all .2s;
+        &:hover,&.active{
+          color: $global-primary;
+          //border-bottom: 3px solid $global-primary;
+          span{
+            transform: scale(1.1,1.1);
+          }
+        }
+        span{
+          transition: all .3s;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .head_right_content{
+    position: absolute;
+    right: 20px;
+    top:0;
+    color: #999;
+    .help_icon{
+      width: 20px;
+      height: 20px;
+      float: left;
+      margin: 15px 8px 0 0;
+      cursor: pointer;
+    }
+  }
+  .text_title{
+    float: left;
+    p{
+      margin-top: 5px;
+    }
+  }
+}
+/* Effect 17: move up fade out, push border */
+.cl-effect-17 a {
+  //color: #4C5C6F;
+  //text-shadow: none;
+  //padding: 10px 0;
+}
+
+.cl-effect-17 a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 3px;
+  background: $global-primary;
+  opacity: 0;
+  -webkit-transform: translateY(5px);
+  -moz-transform: translateY(5px);
+  transform: translateY(5px);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  pointer-events: none;
+}
+
+
+.cl-effect-17 a:hover::after,
+.cl-effect-17 a:focus::after,
+.cl-effect-17 a.active::after
+{
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}

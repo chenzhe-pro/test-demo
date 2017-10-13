@@ -1,0 +1,64 @@
+@import "../../core/utility";
+@import "../task/task";
+.dailySheet {
+  border: 1px solid #D9DDE7;
+  padding: 10px;
+  margin-bottom: 10px;
+  .list_title{
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .el-dialog--small {
+    width: 900px;
+    .cell {
+      padding-left: 0;
+      padding-right: 0;
+      * {
+        border-color: #ffffff;
+      }
+      textarea {
+        height: 100%;
+      }
+    }
+  }
+  .el-textarea {
+    height: 79px;
+  }
+  .matters_table, .mood_table, .ud_table {
+    .el-table__row {
+      border: none;
+      td {
+        &:first-child {
+          background: $gray-background;
+        }
+      }
+    }
+  }
+  .datePick {
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  .span_textarea {
+    display: block;
+    padding: 5px;
+    height: 79px;
+  }
+  //.span_border {
+  //  display: block;
+  //  width: 93%;
+  //  height: 54px;
+  //  border: 1px solid #D9DDE7;
+  //  border-radius: 5px;
+  //}
+  .comment_item {
+    .el-textarea {
+      width: 93%;
+    }
+  }
+  .is-error {
+    border-color: red;
+  }
+}
+
+

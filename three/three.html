@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>lesson1-by-shawn.xie</title>
+        <!--引入Three.js-->
+        <script src="three.min.js"></script>
+        <style type="text/css">
+            div#canvas-frame{
+                  border: none;
+                  cursor: move;
+                  width: 100%;
+                  height: 100%;
+                  background-color: #EEEEEE;
+                }
+        </style>
+    </head>
+
+    <body>
+        <!--盛放canvas的容器-->
+        <div id="canvas-frame">
+        
+        </div>
+    </body>
+    <script type="text/javascript">
+      var renderer,width = document.documentElement.clientWidth,
+          height = document.documentElement.clientHeight;
+      function initThree() {
+          
+          renderer = new THREE.WebGLRenderer({
+              antialias : true
+          });
+          renderer.setSize(width, height);
+          document.getElementById('canvas-frame')
+                  .appendChild(renderer.domElement);
+          renderer.setClearColor(0x000000, 1.0);
+      }
+
+      var camera;
+      function initCamera() {
+          camera = new THREE.PerspectiveCamera(45, width / height, 1, 20000);
+          camera.position.x = 0;
+          camera.position.y =50;
+          camera.position.z = 150;
+          camera.up.x = 0;
+          camera.up.y = 1;
+          camera.up.z = 0;
+          camera.lookAt({
+              x : 0,
+              y : 0,
+              z : 0
+          });
+      }
+      var scene;
+      function initScene() {
+          scene = new THREE.Scene();
+      }
+      var light;
+      function initLight() {
+          light = new THREE.DirectionalLight(0xFF0000, 1.0, 0);
+          light.position.set(100, 100, 200);
+          scene.add(light);
+      }
+      // var cube;
+      // function initObject() {
+      //     var xx=yy=zz=width*.100;
+      //     cube = new THREE.Mesh(new THREE.CubeGeometry(xx, yy, zz), //形状の設定
+      //     new THREE.MeshLambertMaterial({
+      //         color : 0xff0000
+      //     }) //材質の設定
+      //     );
+      //     scene.add(cube);
+      //     cube.position.set(0, 0, 0);
+      // }
+      //设置物体
+              var sphere;
+              function initObject(){  
+                sphere = new THREE.Mesh(
+                     new THREE.SphereGeometry(20,20),                //width,height,depth
+                     new THREE.MeshLambertMaterial({color: 0xff0000}) //材质设定
+                );
+                scene.add(sphere);
+                sphere.position.set(0,0,0);
+              }
+      initThree();
+        initCamera();
+        initScene();
+        initLight();
+        initObject();
+        renderer.clear();
+        renderer.render(scene, camera);
+    </script>
+</html>

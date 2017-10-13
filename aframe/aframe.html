@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>aframe test</title>
+  <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<script type="text/javascript" src='aframe.min.js'></script>
+</head>
+<body>
+	<a-scene>
+
+      <!-- <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cube position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9"></a-cube>
+      <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane> -->
+<!-- Model -->
+      <!-- <a-entity id="model" position="0 0 -2">
+        <a-animation attribute="rotation" from="0 -30 0" to="0 330 0" dur="15000" easing="linear" repeat="inifite"></a-animation>
+        <a-model position="-.35 0 .55" rotation="0 -20 0" scale="1.5 1.5 1.5" src="https://aframe.io/aframe/examples/_models/man/man.dae">
+          <a-root>
+  <a-entity material="opacity: 1.0" loader="src: url(https://aframe.io/aframe/examples/_models/man/man.dae); format: collada">
+  </a-entity>
+</a-root>
+        </a-model>
+        <a-image src="https://aframe.io/aframe/examples/_images/radial-shadow-2.png" rotation="-90 0 0" scale="0.5 0.5 0.5"></a-image>
+      </a-entity>
+      <a-sky color="#ECECEC"></a-sky> -->
+      <a-camera fov="80" position="0 1.8 0" near="0.2" cursor-color="#33CCFF"></a-camera>
+
+      <a-curvedimage src="1.jpg" radius="5.7" theta-length="180" height="9" rotation="0 80 0" scale="1.2 1.2 1.2"></a-curvedimage>
+      <a-curvedimage src="1.jpg" radius="5.7" theta-length="18" height=".5" rotation="0 80 0" position="0 2 0" opacity="0.2"></a-curvedimage>
+      <a-curvedimage src="1.jpg" radius="5.7" theta-length="72" height="2.6" rotation="0 -45 0" position="0 0.7 0" scale="0.6 0.6 0.6"></a-curvedimage>
+      <a-curvedimage src="1.jpg" radius="5.7" theta-length="72" height="3.02" rotation="0 100 0" scale="0.8 0.8 0.8"></a-curvedimage>
+
+      <a-image position="0 -5 0" src="../_images/radial-shadow-2.png" rotation="-90 0 0" scale="6 6 6"></a-image>
+
+      <a-sky color="#FFF"></a-sky>
+      <!-- <a-videosphere src="https://ucarecdn.com/bcece0a8-86ce-460e-856b-40dac4875f15/" autoplay="true" loop="true" rotation="0 180 0"></a-videosphere> -->
+    </a-scene>
+</body>
+</html>

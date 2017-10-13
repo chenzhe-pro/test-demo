@@ -1,0 +1,48 @@
+.departmentSet{
+
+  .set_content{
+    .select_form{
+      width: 426px;
+      margin: 0 auto;
+    }
+    a.center{
+      margin-left: 450px;
+      margin-top: 20px;
+    }
+    width: 1050px;
+    margin: 0 auto;
+    .method_text{
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    .gray-box{
+      background-color: #F5F5F5;
+      padding: 20px;
+      >div{
+        //margin-bottom: 10px;
+        img{
+          width: 25px;
+          height: 24px;
+          display: inline-block;
+        }
+        a.primary{
+          color: $global-primary;
+        }
+      }
+      p.instructions{
+        color: #999;
+      }
+    }
+  }
+  .el-input__inner{
+    width: 300px;
+    height: 40px;
+  }
+  .el-form-item__label{
+    text-align: left;
+  }
+  .el-button.is-disabled{
+    background-color: #ccc;
+    color: #fff;
+  }
+}

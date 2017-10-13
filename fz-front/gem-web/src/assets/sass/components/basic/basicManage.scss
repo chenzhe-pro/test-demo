@@ -1,0 +1,30 @@
+//.ivu-menu-horizontal.ivu-menu-light:after, .ivu-menu-vertical.ivu-menu-light:after{
+//  background: #0070D2;
+//}
+//.ivu-menu-horizontal.ivu-menu-light:after{
+//  height: 2px;
+//}
+//.ivu-menu-light.ivu-menu-horizontal .ivu-menu-item-active,
+//.ivu-menu-light.ivu-menu-horizontal .ivu-menu-item:hover,
+//.ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu-active,
+//.ivu-menu-light.ivu-menu-horizontal .ivu-menu-submenu:hover{
+//  border-top: 2px solid #0070D2;
+//}
+.ivu-modal-confirm-body label{
+  display: inline-block;
+  width: 80px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.basicManage{
+  .el-input--small .el-input__inner {
+    height: 36px;
+    //width: 569px;
+    font-size: 14px;
+  }
+  //.el-input__icon+.el-input__inner{
+  //  height: 36px;
+  //  width: 569px;
+  //  font-size: 14px;
+  //}
+}

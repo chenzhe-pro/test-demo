@@ -1,0 +1,106 @@
+.stationSet {
+  position: relative;
+  .set_content {
+    min-height: 650px;
+    position: relative;
+  }
+  .left_content {
+    width: 260px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    border: 1px solid $global-border;
+    min-height: 650px;
+    margin-bottom: 20px;
+  }
+  .right_content {
+    padding: 20px;
+    margin-left: 280px;
+    border: 1px solid $global-border;
+    min-height: 650px;
+    margin-bottom: 20px;
+  }
+  .line_ {
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background-color: $global-border;
+    left: 20%;
+    display: none;
+  }
+  .card_node {
+    width: 240px;
+    margin: 0;
+  }
+  .indicator_text {
+    color: #999;
+  }
+  .select_box {
+    border: 1px solid #ccc;
+    color: #ccc;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 20px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .active_box {
+    position: relative;
+    border: 1px solid #4C5C6F;
+    color: #4C5C6F;
+    background: url("../img/right_group.png") right top no-repeat;
+    background-size: 17px 16px;
+  }
+  .all_tag {
+    &:hover {
+      cursor: pointer;
+    }
+    span {
+      color: #999;
+      border: 1px solid #999;
+      &.active_tag {
+        color: #3DA8F5;
+        border: 1px solid #3DA8F5;
+      }
+    }
+  }
+  .child_tag {
+    &:hover {
+      cursor: pointer;
+    }
+    span {
+      color: #ccc;
+      border: 1px solid #ccc;
+      &.active_tag {
+        color: #3DA8F5;
+        border: 1px solid #3DA8F5;
+      }
+    }
+  }
+  .gray_bg {
+    background-color: #f5f5f5;
+    color: #999;
+    .tabs {
+      line-height: 40px;
+      border-bottom: 1px solid #D9DDE7;
+      span {
+        padding: 0 15px;
+      }
+    }
+    //.tag_list {
+    //    padding: 15px 15px 0;
+    //}
+  }
+  .bg_gray {
+    background: #F5F5F5;
+    .el-tabs__active-bar {
+      height: 0;
+      //background-color: #fff;
+    }
+  }
+  .el-form-item__label {
+    text-align: left;
+  }
+}

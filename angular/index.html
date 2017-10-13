@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+         <meta name="apple-mobile-web-app-capable" content="yes">
+         <meta name="apple-mobile-web-app-status-bar-style" content="transluscent">
+         <title>angular测试</title>
+         <script src="js/jquery-1.11.2.min.js"></script>
+         <!--[if lt IE 8]>
+         <script>
+            alert("您在使用IE低版本浏览器，请升级IE9及以上或者谷歌、360浏览器，体验更佳");
+             window.location.href="http://rj.baidu.com/soft/detail/23356.html?ald";
+         </script>
+         <![endif]-->
+         <!--[if IE 8]>
+         <script src="js/json2.js"></script>
+         <script src="js/angular/1.2.30/angular.min.js"></script>
+         <script src="js/angular/1.2.30/angular-route.min.js"></script>
+         <script>
+            alert("您在使用IE8浏览器，使用IE9及以上或者谷歌、360浏览器会获得更好的体验")
+        </script>
+        <![endif]-->
+        <!--[if (!IE)|(gte IE 9)]><!-->
+        <script src="js/angular/1.4.0/angular-all.min.js"></script>
+        <script src="js/angular/1.4.0/angular-route.min.js"></script>
+        <!--<![endif]-->
+        <script src="js/highchart/highcharts.js"></script>
+        <script src="js/highchart/highcharts-ng.js"></script>
+        <script src="js/index.js"></script>
+
+        <script >
+
+        </script>
+    </head>
+    <body>
+        <div class="c" ng-app="content"  id="ng-app">
+            <div ng-include="'head.html'"></div>
+            <div class="f" ng-controller="f">
+
+                <table>
+                    <tr ng-repeat="x in data" ng-hide="x.hide">
+                        <td>{{$index+1}}</td>
+                        <td>{{x.name}}</td>
+                        <td>{{x.age}}</td>
+                        <td ng-click="deleteData($index)">删除</td>
+                    </tr>
+                </table>
+                <input type="checkbox" ng-model="all">
+                <input type="checkbox"  ng-model="checkboxs[0]" ng-checked="all" ng-true-value="'0'" ng-click="click(0)">{{data[0].name}}
+                <input type="checkbox"  ng-model="checkboxs[1]" ng-checked="all" ng-true-value="'1'" ng-click="click(1)">{{data[1].name}}
+                <span>{{checkboxs[0]+","+checkboxs[1]+","+all}}</span>
+                <br>
+                <input type="checkbox" ng-model="all1" ng-click="all(all1)">
+                <input type="checkbox"  ng-model="checkboxs[0]" ng-checked="all1" ng-true-value="{name:'{{data[0].name}}',age:{{data[0].age}}}" ng-false-value="null" ng-click="check()">{{data[0].name}}
+                <input type="checkbox"  ng-model="checkboxs[1]" ng-checked="all1" ng-true-value="{name:'{{data[1].name}}',age:{{data[1].age}}}" ng-false-value="null" ng-click="check()">{{data[1].name}}
+                <span>{{checkboxs[0]+","+checkboxs[1]}}</span>
+                <alert alert="alert"></alert>
+                <p ng-if="flg">撒旦撒旦撒</p>
+                <div class="add" ng-click="add()" >添加</div>
+
+                    <highchart id="chart1" config="chartConfig"></highchart>
+                <div class="checkbox">
+                    <input type="checkbox">
+                </div>
+                <highchart id="chart2" config="chartConfig2"></highchart>
+            </div>
+            <div class="route" ng-view></div>
+            <!-- <ng-view></ng-view> -->
+        </div>
+        <!-- <div class="route" ng-app="route">
+            <div class="route" ng-view></div>
+        </div> -->
+
+    </body>
+
+</html>

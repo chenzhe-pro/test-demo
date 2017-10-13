@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <title>three.js css3d - panorama</title>
+        <style>
+                body {
+                        background-color: #fff;
+                        margin: 0;
+                        cursor: move;
+                        overflow: hidden;
+                }
+
+                a {
+                        color: #ffffff;
+                }
+
+                #info {
+                        position: absolute;
+                        width: 100%;
+                        color: #ffffff;
+                        padding: 5px;
+                        font-family: Monospace;
+                        font-size: 13px;
+                        font-weight: bold;
+                        text-align: center;
+                        z-index: 1;
+                }
+                div .hot{position: absolute;top: 50%;left: 32%;}
+        </style>
+    
+    
+    </head>
+    <body>
+        <div id="main360"></div>
+        <div id="data">x:<span></span>, y:<span></span>, z:<span></span></div>
+        <div id="Orientation">alpha:<span></span>, beta:<span></span>, gamma:<span></span></div>
+        <div id="txt"></div>
+        <script type="text/javascript" src="t_1/three.min.js"></script>
+        <script type="text/javascript" src="t_1/CSS3DRenderer.js"></script>
+        <script type="text/javascript" src="t_1/three.pano.js"></script>
+        <script type="text/javascript" src="t_1/TweenLite.min.js"></script>
+        <script type="text/javascript">
+            var wallArr=[];
+            for(var i = 0; 6 > i; i++)
+            {
+                d = document.createElement("div"),
+                d.style.width = "1032px",
+                d.style.height = "1032px",
+                html = "";
+                0 == i && (html = '<span index="1" class="hot hot1"><em class="finger"></em></span><span index="2" class="hot hot2"><em class="finger"></em></span>'),
+                4 == i && (html = '<span index="3" class="hot hot3"><em class="finger"></em></span><span index="4" class="hot hot4"><em class="finger">sadsdasd</em></span>'),
+                5 == i && (html = '<span index="5" class="hot hot5"><em class="finger"></em></span><span index="6" class="hot hot6"><em class="finger"></em></span>'),
+                d.innerHTML = '<img src="' + ["11.jpg", "22.jpg", "66.jpg", "55.jpg", "33.jpg", "44.jpg"][i] + '" width="100%" />' + html,
+                wallArr.push(d);
+            }
+            pano = new THREE.panorama({
+                renderType: "div",
+                renderElements: wallArr,
+                initLon: 60,
+                warp: document.querySelector("#main360"),
+                dragDom: document.querySelector("#main360")
+            });
+        pano.autoSpeed = 0
+        pano.androidDeviceSupport = !0,
+        pano.lockLat = 0,
+        pano.initCss3d(),
+        pano.initDomEvent(),
+        pano.renderMobile(),
+        pano.initDevice(),
+        pano.play();
+        document.querySelector(".hot4").onclick=function(){alert(1)}
+    </script>
+    </body>
+</html>

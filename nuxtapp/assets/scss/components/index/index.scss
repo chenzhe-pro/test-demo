@@ -1,0 +1,86 @@
+@import "dailySheet";
+@import "employeeCheck";
+@import "monthlyPlan";
+@import "todoTask";
+.mainPage {
+  .content_content {
+    width: 880px;
+    margin: 20px auto;
+    >div{
+      width: 280px;
+      float: left;
+      &+div{
+        margin-left: 20px;
+      }
+    }
+    //.content_left {
+    //  width: 280px;
+    //  margin-right: 20px;
+    //}
+    //.content_middle {
+    //  float: left;
+    //  width: 280px;
+    //}
+    //.content_right {
+    //  width: 280px;
+    //}
+    .part_title{
+      font-weight: bold;
+      color: #4C5C6F;
+      font-size: 16px;
+      //padding: 10px;
+      //padding-bottom: 0;
+    }
+  }
+
+  .task_time{
+    height: 40px;
+    line-height: 40px;
+    background-color:#e6e6e6;
+    padding: 0 10px;
+    img{
+      float: left;
+      margin: 12px 8px 0 0;
+    }
+    .task_uncompleted{
+      color: #3DA8F5;
+    }
+  }
+  .gray-text{
+    color: #999;
+  }
+  .black-text{
+    color: #4C5C6F;
+  }
+  .task_node{
+    background-color: #F5F5F5;
+    cursor: pointer;
+    .task_type{
+      height: 40px;
+      line-height: 40px;
+      border-bottom: 1px solid #D9D9D9;
+      padding: 0 10px;
+      span{
+        float: left;
+      }
+      .vertical_bar{
+        width: 3px;
+        height: 16px;
+        background-color: #FFAF38;
+        border-radius: 2px;
+        display: block;
+        float: left;
+        margin: 12px 10px 0 0;
+      }
+    }
+    .task_content{
+      padding: 10px;
+    }
+    .task_des{
+      color: #999;
+    }
+    .task_man{
+      margin: 10px 0;
+    }
+  }
+}

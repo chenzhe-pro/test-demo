@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<input type="text" x-webkit-speech lang="zh-CN" onclick="start()" />
+</body>
+<script type="text/javascript">
+	if(!webkitSpeechRecognition) {
+		alert("设备不只是语音识别");
+		// return ;
+	}
+	var  recognition  =  new  webkitSpeechRecognition();
+	recognition.continuous  =  true ;  
+ 	recognition.interimResults  =  true ;  
+ 	recognition.lang  =  " cmn-Hans-CN ";  
+
+	 function start (argument) {
+	 	// body...
+	 	recognition.start();  
+	 }
+	 // start()	
+	 recognition.onresult  =  function (event) {  
+	 	console.log(event.results)
+	 }
+	 recognition.onerror = function(event){
+	  console.log('error?');
+	  console.log(event);
+	}
+</script>
+</html>

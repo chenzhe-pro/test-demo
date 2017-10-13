@@ -1,0 +1,54 @@
+{
+  "name": "Photo-Sphere-Viewer",
+  "version": "3.1.0",
+  "authors": [
+    {
+      "name": "Jérémy Heleine",
+      "email": "jeremy.heleine@gmail.com",
+      "homepage": "http://jeremyheleine.me"
+    },
+    {
+      "name": "Damien \"Mistic\" Sorel",
+      "email": "contact@git.strangeplanet.fr",
+      "homepage": "http://www.strangeplanet.fr"
+    }
+  ],
+  "description": "A JavaScript library to display Photo Sphere panoramas",
+  "homepage": "https://github.com/mistic100/Photo-Sphere-Viewer",
+  "main": [
+    "dist/photo-sphere-viewer.js",
+    "dist/photo-sphere-viewer.css"
+  ],
+  "dependencies": {
+    "three.js": ">= 0.0.67"
+  },
+  "keywords": [
+    "photosphere",
+    "panorama",
+    "threejs"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mistic100/Photo-Sphere-Viewer.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src",
+    "tests",
+    "package.json",
+    "Gruntfile.js"
+  ],
+  "_release": "3.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.1.0",
+    "commit": "a98b3511fa3ff735b517dd12443ab4c947b22810"
+  },
+  "_source": "https://github.com/mistic100/Photo-Sphere-Viewer.git",
+  "_target": "^3.1.0",
+  "_originalSource": "Photo-Sphere-Viewer",
+  "_direct": true
+}

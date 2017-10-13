@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表页</title>
+    <% include common/meta.ejs%>
+    <% include common/scripts.ejs%>
+    <% include common/styles.ejs%>
+    <link rel="stylesheet" href="../public/asset/css/index.css">
+</head>
+<body>
+    <div id="app">
+        <%include common/head.ejs%>
+        <ul>
+            <% for(var i=0; i<list.length; i++) {%>
+            <li @click="click(name)"><a href="detail/<%=list[i].course.id%>"><%= list[i].course.name %></a></li>
+            <% } %>
+        </ul>
+        <a href="javascript:;" @click="click(name)">{{name}}</a>
+        <el-button >sss</el-button>
+        <div class="img"></div>
+    </div>
+</body>
+<script src="../public/<%=asset_config.path%>/js/list.js"></script>
+<script>
+
+</script>
+</html>

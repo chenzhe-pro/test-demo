@@ -1,0 +1,150 @@
+.strategy{
+  .system_map{
+    overflow: hidden;
+  }
+  .map + .map{
+    margin: 0 30px 30px 0;
+  }
+  .strategy_card{
+    width:280px;
+    height: 152px;
+    .title{
+      height: 20px;
+      line-height: 20px;
+      margin-bottom: 6px;
+    }
+    .strategy_tag{
+      padding: 2px 10px;
+      background-color: #82C0EA;
+      color: #fff;
+      font-size: 12px;
+      border-radius:4px ;
+    }
+  }
+  .strategy_des{
+    height: 120px;
+    padding: 12px;
+    border-bottom: 1px solid #F0F0F0;
+    p{
+      color: #999;
+      span{
+        color: #4C5C6F;
+      }
+    }
+  }
+  .strategy_bottom{
+    height: 31px;
+    line-height: 31px;
+    text-align: center;
+    color: $global-primary;
+    &:hover{
+      cursor: pointer;
+      background-color: #3DA8F5;
+      color: #fff;
+    }
+  }
+  .btn-primary{
+    padding: 0;
+  }
+  .unover_text{
+    color: #F6A623;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  .over_text{
+    color: #ccc;
+  }
+  .bold_font{
+    font-size: 16px;
+    font-weight:bold;
+  }
+  .gray-text{
+    color: #999;
+  }
+  .blue-text{
+    color: $global-primary;
+  }
+  .operate_btn{
+    position: absolute;
+    right: 0;
+    top: 6px;
+  }
+  .operate_btns{
+    right: 10px;
+    top: 3px;
+  }
+  .indicator_box{
+    position: relative;
+  }
+  .el-button--text{
+    color: #D9DDE7;
+    &:hover{
+      color: #20a0ff;
+    }
+  }
+  .top_head{
+    padding: 15px 20px;
+    border-bottom: 1px solid #D9DDE7;
+  }
+  .plan_content{
+    border: 1px solid #D9DDE7;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .indicator_box{
+    overflow: hidden;
+  }
+  .strategyManage{
+    //样式重新
+    .el-row{
+      padding: 20px;
+    }
+    .el-step__head{
+      height: 15px;
+      width: 15px;
+    }
+    .el-step__icon{
+      line-height: 15px;
+    }
+    .el-step__head.is-text{
+      border-width:1px ;
+    }
+    .el-step__line.is-vertical{
+      left: 7px;
+      top: 15px;
+      width: 1px;
+    }
+    .el-step__description.is-wait{
+      color: #4C5C6F;
+    }
+    .el-steps{
+      .el-input{
+        width: auto;
+      }
+    }
+    .el-step__description{
+      font-size: 14px;
+    }
+    .el-input__inner{
+      height: 32px;
+    }
+    .el-steps {
+      .red-border{
+        .el-input__inner{
+          border: 1px solid #ff4949;
+        }
+      }
+    }
+  }
+
+  .el-dialog--large{
+    width: 1000px;
+  }
+  .head_menu_content{
+    ul{
+      li{
+        width:70px;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@import "variable/variable";
+
+@import "core/index";
+@import "mixin/index";
+@import "core/utility";
+@import "components/common/foot";
+.wrapper{
+  .el-button.is-disabled{
+    background-color: #ccc;
+  }
+  /*登录*/
+  .login_box{
+    width: 465px;
+    height: 462px;
+    margin: 100px auto;
+    div.img_box{
+      width:154px;
+      height: 33px;
+      margin: 0 auto;
+    }
+    .login_item{
+      >a.gray{
+        color: #999;
+      }
+      p.small_text{
+        font-size: 12px;
+      }
+      width: 300px;
+      margin: 0px auto 40px;
+      text-align: center;
+    }
+    .receive_mail{
+      width: 390px;
+      margin: 0 auto 80px ;
+      text-align: center;
+    }
+    .sub_header{
+      color: #4C5C6F;
+      font-size: 20px;
+      margin-top: 31px;
+      margin-bottom: 18px;
+    }
+    .login_btn{
+      width: 100%;
+      //background-color: #ccc;
+      color: #fff;
+      text-align: center;
+      height: 44px;
+      //line-height: 44px;
+      border-radius:5px ;
+      &:hover{
+        //cursor: pointer;
+      }
+    }
+    .white_btn{
+      height: 44px;
+      line-height: 44px;
+      border: 1px solid #3DA8F5;
+      border-radius:5px ;
+      color: #3DA8F5;
+    }
+    .receive_btn{
+      background-color: #3DA8F5;
+    }
+    .el-input__inner{
+      height: 44px;
+    }
+    a.blue_jump{
+      color: #3DA8F5;
+      font-size: 14px;
+    }
+
+  }
+  /*注册*/
+  .register{
+    .login_item{
+      margin-bottom: 20px;
+    }
+    .el-checkbox{
+      float: left;
+    }
+    .el-select{
+      width: 100%;
+    }
+    .el-cascader{
+      width: 100%;
+    }
+    .el-cascader__label{
+      line-height: 44px;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,142 @@
+.task{
+  .content_content{
+    >div{
+      width: 880px;
+      margin: 0 auto;
+    }
+    .addTask{
+      font-size: 14px;
+      color: $global-primary;
+      img{
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin: 1px 3px 0 0;
+      }
+    }
+    li{
+      border: 1px solid $global-border;
+      float: left;
+      padding: 10px;
+      width: 280px;
+      +li{
+        margin-left: 20px;
+      }
+    }
+  }
+  .dark_text{
+    color: #4C5C6F;
+  }
+  .el-radio-group{
+    //.el-radio{
+    //  display: block;
+    //  margin-top: 10px;
+    //}
+  }
+  .block-radio{
+    .el-radio{
+      display: block;
+      margin-top: 10px;
+    }
+  }
+  .list_title{
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .no_data_tip{
+    background-color: #E6E6E6;
+  }
+  .task_node{
+    background-color: #F5F5F5;
+    cursor: pointer;
+    &:hover{
+      box-shadow: 0 0 4px #a5a5a5;
+    }
+    +.task_node{
+      margin-top: 10px;
+    }
+    .task_type{
+      height: 40px;
+      line-height: 40px;
+      border-bottom:1px solid $global-border;
+      padding: 0 10px;
+      span{
+        float: left;
+      }
+    }
+    .task_content{
+      padding: 10px;
+    }
+    .task_man{
+      margin: 10px 0;
+      p{
+        color: #999;
+        span{
+          color: #4C5C6F;
+        }
+      }
+    }
+    .task_des{
+      color: #999;
+    }
+    .task_time{
+      height: 40px;
+      line-height: 40px;
+      background-color: #E6E6E6;
+      padding: 0 10px;
+      img{
+        float: left;
+        margin: 12px 8px 0 0;
+      }
+      .task_uncompleted{
+        color: $global-primary;
+      }
+      .task_completed{
+        color: #999;
+      }
+      .task_delay{
+        color: #D0011B;
+      }
+    }
+  }
+  .vertical_bar{
+    width: 3px;
+    height: 16px;
+    // 默认一般等级
+    background-color: #FFAF38;
+    border-radius: 2px;
+    display: block;
+    float: left;
+    margin: 12px 10px 0 0;
+    //不重要
+    &.L{
+      background-color: #F1A085;
+    }
+    //一般
+    &.M{
+      background-color: #F69A00;
+    }
+    //重要
+    &.F{
+      background-color: #F56700;
+    }
+    //非常重要
+    &.H{
+      background-color: #F63000;
+    }
+  }
+  .load_more{
+    display: block;
+    line-height: 40px;
+    color: #999;
+    text-align: center;
+    border: 1px solid $global-border;
+    margin-top: 10px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+

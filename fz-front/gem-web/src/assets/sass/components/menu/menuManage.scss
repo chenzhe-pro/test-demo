@@ -1,0 +1,17 @@
+.menuManage{
+  .el-table th:first-child>div{
+    padding-left: 39px;
+  }
+}
+.el-button:focus, .el-button:hover{
+  >span i.fa-edit,i.fa-plus-circle,i.fa-play-circle{
+    color: #20a0ff;
+  }
+  >span i.fa-trash,i.fa-ban{
+    color:#ff4949;
+  }
+}
+table i{
+  margin-left: 0;
+}
+

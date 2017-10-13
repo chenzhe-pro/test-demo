@@ -1,0 +1,35 @@
+.childTable{
+  .right_side{
+    padding: 0;
+    margin-left: 280px;
+    border: 1px solid #D9D9D9;
+    min-height: 650px;
+    margin-bottom: 20px
+  }
+  .el-tabs__nav{
+    float: none;
+    width: 250px;
+    margin: 0 auto;
+  }
+  .el-tabs__content{
+    padding: 0 10px;
+  }
+  .head_time_select{
+    border: 1px solid #D9D9D9;
+    border-bottom: 0;
+  }
+  .return_btn{
+    position: absolute;
+    z-index: 100;
+    color: #3DA8F5;
+    right: 0;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  //日清表
+  .daliyTable{
+
+
+  }
+}

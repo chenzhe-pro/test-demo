@@ -1,0 +1,49 @@
+html,
+body,
+.pano-stage {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+.pano-items {
+  position: absolute;
+  z-index: 9999;
+  right: 0;
+  bottom: 50px;
+  font-size: 14px; }
+  .pano-items > li {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0; }
+    .pano-items > li > a {
+      display: block;
+      padding: 8px 15px;
+      background: rgba(61, 61, 61, 0.5);
+      color: rgba(225, 225, 225, 0.75); }
+
+.pano-scene {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.psv-download-button {
+  display: none; }
+
+.sofa {
+  position: absolute;
+  padding: 3px 8px;
+  background: rgba(61, 61, 61, 0.5);
+  color: rgba(225, 225, 225, 0.75);
+  left: 30px;
+  top: 80%;
+  z-index: 59; }
+
+#pano-sofa {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 58; }
+
+/*# sourceMappingURL=image.css.map */

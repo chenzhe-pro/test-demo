@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+    <title>语音停写</title>
+</head>
+
+<body>
+    <textarea id="result"></textarea>
+	<br>
+	<script src="http://blog.faultylabs.com/files/md5.js"></script>	
+	<script src="http://webapi.openspeech.cn/socket.io/socket.io.js"></script>
+	<script src='http://webapi.openspeech.cn/js/util/zepto.min.js'></script>
+	<script src='http://webapi.openspeech.cn/js/util/jwav.min.js'></script>
+	<script src='http://webapi.openspeech.cn/fingerprint.js'></script>
+	<script src="lat.js"></script>
+	<script type="text/javascript">
+	    /**
+		  * ³õÊ¼»¯Session¶ÔÏó
+		  */
+	    var session = new IFlyIatSession({
+                                      'url' : 'http://webapi.openspeech.cn/',							
+                                      'reconnection'       : true,
+									  'reconnectionDelay'  : 30000,
+									  'compress' : 'speex',
+									  'speex_path' : 'speex.js',              //speex.js±¾µØÂ·¾¶ 
+									  'vad_path' : 'vad.js',                  //vad.js±¾µØÂ·¾¶
+									  'recorder_path' : 'recorderWorker.js'    //recordWorker.js±¾µØÂ·¾¶
+						         });
+		
+		/**
+		  * ¿ªÆôÂ¼Òô²¢»ñÈ¡Ê¶±ð½á¹û
+		  */
+		function start() {
+		    /***********************************************************ÒÔÏÂÇ©Ãû¹ý³ÌÐè¸ù¾ÝÊµ¼ÊÓ¦ÓÃÐÅÏ¢ÌîÈë***************************************************/
+		 
+		    var appid = "5714b45b";                              //Ó¦ÓÃAPPID£¬ÔÚopen.voicecloud.cnÉÏÉêÇë¼´¿É»ñµÃ
+		    var timestamp = new Date().toLocaleTimeString();                      //µ±Ç°Ê±¼ä´Á£¬Àýnew Date().toLocaleTimeString()
+            var expires = 60000;                          //Ç©ÃûÊ§Ð§Ê±¼ä£¬µ¥Î»:ms£¬Àý60000	
+            var secret_key = 'f44f8bd59d44301b';	
+		    //!!!Îª±ÜÃâsecretkeyÐ¹Â¶£¬Ç©Ãûº¯Êýµ÷ÓÃ´úÂë½¨ÒéÔÚ·þÎñÆ÷ÉÏÍê³É
+		    var signature = faultylabs.MD5(appid + '&' + timestamp + '&' + expires + '&' + secret_key);	
+		   /************************************************************ÒÔÉÏÇ©Ãû¹ý³ÌÐè¸ù¾ÝÊµ¼ÊÓ¦ÓÃÐÅÏ¢ÌîÈë**************************************************/
+		    var params = {"grammar_list" : null, "params" : "aue=speex-wb;-1, usr = mkchen, ssm = 1, sub = iat, net_type = wifi, ent =sms16k, rst = plain, auf  = audio/L16;rate=16000, vad_enable = 1, vad_timeout = 5000, vad_speech_tail = 500, caller.appid = " + appid + ",timestamp = " + timestamp + ",expires = " + expires, "signature" : signature};
+			
+            /* µ÷ÓÃ¿ªÊ¼Â¼Òô½Ó¿Ú£¬Í¨¹ýfunction(volume)ºÍfunction(err, obj)»Øµ÷ÒôÁ¿ºÍÊ¶±ð½á¹û */
+		    session.start(params, function (volume)
+		    {	
+		    	// alert(volume);
+                /* »ñÈ¡²¢Õ¹Ê¾µ±Ç°Â¼ÒôÒôÁ¿ */			
+			    if(volume < 6 && volume > 0)
+				    console.log("volume : " + volume);
+					
+			    /* Èôvolume·µ»Ø¸ºÖµ£¬ËµÃ÷Âó¿Ë·çÆô¶¯Ê§°Ü*/
+			    if(volume < 0)
+				    console.log("麦克风失败");
+		    }, function (err, result)
+		    {
+			    /* Èô»Øµ÷µÄerrÎª¿Õ»ò´íÎóÂëÎª0£¬Ôò»á»°³É¹¦£¬¿ÉÌáÈ¡Ê¶±ð½á¹û½øÐÐÏÔÊ¾*/
+		        if(err == null || err == undefined || err == 0)
+			    {
+				    if(result == '' || result == null)
+					    document.getElementById('result').innerHTML = "没有内容";
+				    else
+					    document.getElementById('result').innerHTML = result;
+			    /* Èô»Øµ÷µÄerr²»Îª¿ÕÇÒ´íÎóÂë²»Îª0£¬Ôò»á»°Ê§°Ü£¬¿ÉÌáÈ¡´íÎóÂë */	
+			    } else
+			    {
+			        document.getElementById('result').innerHTML = 'error code : ' + err + ", error description : " + result;
+			    }
+		    }, function(message)
+			{
+				if(message == 'onStop')
+				{
+					console.log("Â¼ÒôÍ£Ö¹");
+				} else if(message == 'onEnd')
+				{
+					console.log("»á»°½áÊø");
+				}
+			}, function(data)
+			{
+				console.log(data);
+			});			
+			
+		};
+		
+		function stop() {
+			session.stop(null);
+		};
+	</script>
+	<input type="button" value="开始" onclick="start();"  />
+	<input type="button" value="停止" onclick="stop();"  />
+</body>
+</html>

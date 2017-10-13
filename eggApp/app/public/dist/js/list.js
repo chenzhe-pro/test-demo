@@ -1,0 +1,1 @@
+var vm=new Vue({el:"#app",data:{name:"萨达萨达萨达撒",a:1231231},methods:{click:function(a){alert(a)}}});

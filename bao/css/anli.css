@@ -1,0 +1,11 @@
+.cc{position: relative;width: 1200px;margin: 0 auto 50px;}
+.cc1{margin-top: 80px;}
+.cc4{margin-bottom: 170px;}
+.cc .text{width: 700px;background-color: #fff;padding: 80px 50px;margin: -400px 0 0 450px;position: relative;z-index: 1;}
+.cc .text .p1{color: #999;}
+.cc .text .p1 span{color: #ef5350;}
+.cc .text .p2{color: #000;font-size: 36px;font-weight: bold;}
+.cc .text .p3{color: #000;font-size: 18px;margin: 67px 0 8px;}
+.cc .text .p4{color: #999;line-height: 30px;overflow: hidden;font-size: 16px;}
+.cc .text .p44{margin: 20px 0 0 ;}
+.share{width: 112px;height: 52px;background:url(../images/share.jpg) no-repeat 0;display: block;margin-top: 70px;}

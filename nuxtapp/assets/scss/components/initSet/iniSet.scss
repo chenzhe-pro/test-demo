@@ -1,0 +1,161 @@
+//步骤条样式 start
+//@import "../../components/departmentSet/departmentSet";
+@import "./postSet";
+@import "./stationSet";
+@import "./departmentSet";
+.init_step{
+  height: 50px;
+  line-height: 50px;
+  width: 1050px;
+  margin: 0 auto;
+  .step{
+    height: 19px;
+    line-height: 19px;
+    float: left;
+    margin-top: 16px;
+    &:last-child{
+      .dot_line{
+        display: none;
+      }
+    }
+  }
+  .step_number{
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 19px;
+    background-color: #CCCCCC;
+    margin-right: 10px;
+    i{
+      display: none;
+    }
+    &.current_step{
+      background-color: $global-primary;
+    }
+    &.success_step{
+      background-color: $global-primary;
+      i{
+        font-size: 12px;
+        display: inline;
+      }
+      span{
+        display: none;
+      }
+    }
+  }
+  .dot_line{
+    display: inline;
+    vertical-align: middle;
+    margin:0 38px;
+  }
+}
+.init_content{
+  border-top: 1px solid $global-border;
+  >div{
+    width: 1050px;
+    margin: 0 auto;
+    //padding: 10px 0;
+    //.set_title{
+    //  color: #4C5C6F;
+    //  font-size: 16px;
+    //  margin-top: 10px;
+    //}
+    //.set_content{
+    //  margin-top: 10px;
+    //}
+  }
+  >.full_content{
+    width: 100%;
+  }
+}
+//步骤条样式 end
+.card_area{
+  li{
+    float: left;
+    margin: 0 20px 20px 0;
+    &.add_node{
+      a{
+        color: $global-primary;
+      }
+    }
+  }
+}
+.card_node {
+  width: 200px;
+  border: 1px solid #D9DDE7;
+  margin: 0 auto;
+  transition: all 0.3s;
+  border-radius: 0 0;
+  &.stop_status{
+    span{
+      color: #999;
+    }
+    .head_list{
+      span{
+        color: #fff;
+      }
+    }
+  }
+  &:hover {
+    //border: 1px solid #b3b8c3;
+    box-shadow: 0 0 6px #d0d0d0;
+    border-radius: 4px 4px;
+  }
+  > div {
+    padding: 10px;
+  }
+  .name{
+    border-bottom: 1px solid #D9DDE7;
+    >div{
+      float: left;
+    }
+    .head_list{
+      span{
+        margin: 0 10px 0 0;
+      }
+    }
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    p{
+      line-height: 26px;
+    }
+  }
+  .des {
+    p {
+      line-height: 28px;
+    }
+  }
+  .op {
+    border-top: 1px solid #D9DDE7;
+    a {
+      color: $global-primary;
+      &:last-child {
+        float: right;
+      }
+      &:only-child{
+        float: none;
+        margin-left: 82px;
+      }
+    }
+  }
+  .node_label {
+    color: #999;
+    display: inline-block;
+    &.label_70{
+      width: 70px;
+    }
+  }
+  .node_value {
+    color: #4C5C6F;
+  }
+  .indicators{
+    color: #4C5C6F;
+    display: block;
+  }
+}

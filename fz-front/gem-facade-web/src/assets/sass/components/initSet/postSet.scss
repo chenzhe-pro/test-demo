@@ -1,0 +1,93 @@
+.postSet{
+  .post_tree_area{
+    overflow: auto;
+    box-shadow: inset 0px 0px 15px 0px #e6e6e6;
+    //min-height: 700px;
+  }
+  .post_tree {
+    width: 200%;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 10px 20px;
+    //cursor: -webkit-grab;
+    //cursor: -moz-grab;
+    //cursor: -o-grab;
+    cursor: grab;
+    ul{
+      padding-top: 20px;
+      position: relative;
+      transition: all 0.5s;
+      &:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      ul{
+        &:after{
+          content: '';
+          position: absolute; top: 0; left: 50%;
+          border-left: 1px solid #ccc;
+          width: 0; height: 20px;
+        }
+        &:before{
+          //content: '';
+          //display: block;
+          //background: url(../img/min.svg);
+          //position: absolute; top: 0; left: 50%;
+          //border-left: 1px solid #ccc;
+          //width: 20px; height: 20px;
+        }
+      }
+    }
+    li {
+      float: left;
+      text-align: center;
+      list-style-type: none;
+      position: relative;
+      padding: 20px 5px 5px 5px;
+
+      transition: all 0.5s;
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 50%;
+        border-top: 1px solid #ccc;
+        width: 50%;
+        height: 20px;
+      }
+      &:after {
+        right: auto;
+        left: 50%;
+        border-left: 1px solid #ccc;
+      }
+      &:only-child:after, &:only-child:before {
+        display: none;
+      }
+      &:only-child {
+        padding-top: 0;
+      }
+      &:first-child:before, &:last-child:after {
+        border: 0 none;
+      }
+      &:last-child:before {
+        border-right: 1px solid #ccc;
+        border-radius: 0 5px 0 0;
+        -webkit-border-radius: 0 5px 0 0;
+        -moz-border-radius: 0 5px 0 0;
+      }
+      &:first-child:after {
+        border-radius: 5px 0 0 0;
+        -webkit-border-radius: 5px 0 0 0;
+        -moz-border-radius: 5px 0 0 0;
+      }
+    }
+
+  }
+  .post_tree li .card_node:hover+ul li::after,
+  .post_tree li .card_node:hover+ul li::before,
+  .post_tree li .card_node:hover+ul::before,
+  .post_tree li .card_node:hover+ul ul::before{
+    border-color:  #94a0b4;
+  }
+}

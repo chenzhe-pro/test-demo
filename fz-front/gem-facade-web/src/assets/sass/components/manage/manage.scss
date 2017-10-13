@@ -1,0 +1,57 @@
+.manage{
+  .card_area li{
+    float: none;
+    margin-right: 0;
+    .card_node{
+      width: 100%;
+    }
+    .card_node .op{
+      text-align: center;
+      padding: 5px 10px;
+      cursor: pointer;
+      &:hover{
+        background-color: #3DA8F5;
+        border-radius:0 0 4px 4px;
+        a{
+          color: #fff;
+        }
+      }
+    }
+    .card_node .op a{
+      margin: 0;
+    }
+  }
+  .tag_list span{
+    border-radius:5px ;
+  }
+  .postManage{
+    >.el-tabs__header{
+      .el-tabs__nav{
+        float: none;
+        width: 100px;
+        margin: 0 auto;
+      }
+    }
+    >.el-tabs__content{
+      padding: 0 20px;
+    }
+  }
+  .close{
+    position: absolute;
+    top:15px;
+    right: 20px;
+    color: #d1dbe5;
+    font-size: 12px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  .el-dialog--small{
+    width: 60%;
+  }
+  .no_margin{
+    .el-form-item__content{
+      margin-left: 0;
+    }
+  }
+}

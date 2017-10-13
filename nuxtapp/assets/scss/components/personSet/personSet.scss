@@ -1,0 +1,26 @@
+.personSet{
+  .content_content{
+    >div{
+      padding: 0 20px;
+    }
+  }
+  .right_content{
+    padding: 0 !important;
+  }
+  .search_area{
+    width: 380px;
+    margin: 10px auto;
+    .el-input__inner{
+      //border-radius: 18px 18px;
+    }
+    .el-button--primary{
+      padding: 8px 20px;
+      //border-radius: 18px 18px;
+      font-size: 18px;
+    }
+  }
+  .card_area{
+    border-top: 1px solid $global-border;
+    padding: 10px;
+  }
+}

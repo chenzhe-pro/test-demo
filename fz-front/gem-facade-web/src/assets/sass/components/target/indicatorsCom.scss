@@ -1,0 +1,88 @@
+@import "../../variable/variable";
+.indicators_his {
+  background: #ffffff;
+  font-family: "Microsoft YaHei";
+  .content_content {
+    margin: 20px;
+    border: 1px solid #D9DDE7;
+    .indicators_menu {
+      min-height: 580px;
+      .el-menu-item-group__title {
+        padding-left: 0px;
+        font-weight: bold;
+        color: #4c5c6f;
+        font-size: $font-size-default;
+      }
+      .el-menu-item {
+        //border-right: 1px solid #d9dde7;
+        height: 60px;
+      }
+    }
+    .line_down {
+      background-color: $gray-background;
+    }
+    .indicators_com {
+      min-height: 580px;
+      padding: 15px 20px;
+      background: $gray-background;
+    }
+    .indicators_search {
+      width: 200px;
+      margin: 0 auto 15px;
+      i {
+        color: $global-primary;
+      }
+      input {
+        height: 32px;
+      }
+    }
+    .indicators_add {
+      padding: 11px 10px;
+      border: 1px solid $global-background;
+      background-color: $global-background;
+      border-radius: 4px;
+      overflow: hidden;
+      p {
+        color: #3DA8F5;
+        width: 81px;
+        margin: 0 auto;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+        span {
+          height: 20px;
+          line-height: 20px;
+          padding-left: 5px;
+        }
+      }
+    }
+    .indicators_box {
+      padding: 10px;
+      background-color: $global-background;
+    }
+  }
+  .indicators_menu {
+    border-right: 1px solid #d9dde7;
+    .is-active {
+      //width: 100%;
+      margin-right: -1px;
+      border-top: 1px solid #d9dde7;
+      border-bottom: 1px solid #d9dde7;
+      border-right: none;
+      //border-right: 1px solid red;
+      border-left: 3px solid $global-primary;
+      background-color: $gray-background;
+      color: $global-primary;
+      i {
+        color: $global-primary;
+      }
+      &::after {
+        height: 0px;
+      }
+    }
+  }
+  .font_color_666 {
+    color: $gray;
+  }
+}

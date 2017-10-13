@@ -1,0 +1,77 @@
+$img_width:30px;
+.head{
+  background: #f5f7f9;
+  position: relative;
+  border-bottom: 1px solid $global-border;
+  > div{
+  }
+  .fa-question:hover{
+
+  }
+}
+.head-logo{
+  width: $img_width;
+  height: $img_width;
+  border-radius: 3px;
+}
+.user-logo{
+  width: $img_width;
+  height: $img_width;
+  cursor: pointer;
+  border-radius: 50% 50%;
+}
+.head-input{
+  width: 300px;
+  margin-left: 36%;
+  float: left;
+}
+.head-header{
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+.head-copy{
+  text-align: center;
+  padding: 10px 0 20px;
+  color: #9ea7b4;
+}
+.head-ceiling{
+  background: #fff;
+  padding: 10px 20px;
+  overflow: hidden;
+  height: 50px;
+}
+.head-ceiling-main{
+  float: right;
+  height: 100%;
+  > a{
+    line-height: $img_width;
+    color: #9ba7b5;
+    float: left;
+  }
+  .head-dropdown-area{
+    i{
+      margin-left: 6px;
+    }
+    font-size: 18px;
+    .user_name{
+      font-size: 14px;
+    }
+    .el-dropdown{
+      font-size: 20px;
+    }
+  }
+}
+.right_content{
+  float: right;
+  .el-button+.el-button{
+    margin-left: 0;
+  }
+  .slot_icon{
+    margin-top: 5px;
+    .el-button{
+      float: right;
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表页</title>
+    <% include common/meta.ejs%>
+    <% include common/scripts.ejs%>
+    <% include common/styles.ejs%>
+    <link rel="stylesheet" href="../public/asset/css/index.css">
+</head>
+<body>
+<div id="app">
+    <%include common/head.ejs%>
+    <a href="javascript:;" @click="click(name)"></a>
+    <el-upload
+            class="upload-demo"
+            action="/upload"
+            :on-preview="handlePreview"
+            :on-remove="handleRemove"
+            :file-list="fileList2"
+            list-type="picture">
+        <el-button size="small" type="primary">点击上传</el-button>
+        <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+    </el-upload>
+</div>
+</body>
+<script>
+    var vm=new Vue({
+        el: '#app',
+        data:{
+            fileList2:[]
+        },
+        methods:{
+            handleRemove(file, fileList) {
+                console.log(file, fileList);
+            },
+            handlePreview(file) {
+                console.log(file);
+            }
+        }
+    });
+</script>
+</html>

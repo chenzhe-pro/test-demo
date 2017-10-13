@@ -1,0 +1,91 @@
+@import "../../variable/variable";
+
+.indicator_box {
+  &:hover{
+    box-shadow: 0 4px 12px #d6dde0;
+  }
+  overflow: hidden;
+  .font_white {
+    color: #ffffff;
+  }
+  background: $global-background;
+  border-radius: $radius-lg;
+  padding: 10px 10px 5px;
+  .recommand {
+    font-size: 12px;
+    color: #F5A623;
+    font-weight: bold;
+  }
+  .defined {
+    font-size: 12px;
+    color: #CCCCCC;
+    font-weight: bold;
+  }
+  //.fa.modify_btn {
+  //  height: 22px;
+  //  line-height: 22px;
+  //  font-size: 18px;
+  //  margin-top: 3px;
+  //  &:hover {
+  //    color: $global-primary;
+  //  }
+  //}
+  .indicator_label {
+    text-align: justify;
+    width: 75px;
+    color: #999;
+  }
+  .indicator_content {
+    width: calc(100% - 75px);
+  }
+  .indicator_height {
+    //height: 25px;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+  .indicator_btn {
+    border-top: 1px solid #f0f0f0;
+    height: 31px;
+    line-height: 20px;
+    text-align: center;
+    color: $global-primary;
+    margin: 5px -10px 0;
+    &:hover {
+      background: #3DA8F5;
+      color: $global-background;
+      i {
+        color: $global-background;
+      }
+    }
+    i {
+      color: #3DA8F5;
+    }
+  }
+  .goal_item {
+    width: 260px;
+  }
+  .el-button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-color: $global-primary;
+    color: $global-primary;
+  }
+  .fa.modify_btn {
+    height: 22px;
+    line-height: 22px;
+    font-size: 18px;
+    margin-top: 3px;
+    &:hover {
+      color: $global-primary;
+    }
+  }
+  .el-form-item {
+    margin-bottom: 5px;
+  }
+  .el-tag {
+    font-size: $font-size-xs;
+    height: 16px;
+    line-height: 16px;
+    border: none;
+  }
+}

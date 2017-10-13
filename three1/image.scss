@@ -1,0 +1,30 @@
+
+.all {
+    position: relative;
+    .panorama-change {
+        position: absolute;
+        top: 0;
+        z-index: 300;
+        right: 0;
+    }
+    #panorama {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+p {
+    margin-bottom: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #0096FF;
+}
+
+a:hover {
+    color: #FF9600;
+}

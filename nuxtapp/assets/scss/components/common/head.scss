@@ -1,0 +1,44 @@
+$img_width:17px;
+.head{
+  background: #fff;
+  position: relative;
+  border-bottom: 1px solid $global-border;
+  box-shadow: 1px 1px 6px #e2e2e2;
+  height: 50px;
+  line-height: 50px;
+  padding: 0px 20px;
+  overflow: hidden;
+  .company_name{
+    font-size: 18px;
+  }
+  .fa{
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
+.head-logo{
+  width: $img_width;
+  height: $img_width;
+  //border-radius: 3px;
+  margin-top: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.user-logo{
+  width: $img_width;
+  height: $img_width;
+  cursor: pointer;
+  border-radius: 50% 50%;
+}
+.head-right{
+  float: right;
+  .user_dropdown{
+    padding: 0 15px;
+    &:hover{
+      background-color: #F5F5F5;
+    }
+  }
+  >span{
+    cursor: pointer;
+  }
+}

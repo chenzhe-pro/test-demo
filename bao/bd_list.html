@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>母婴榜单</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/list.css"/>
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<!--<script src="js/swiper-3.3.1.jquery.min.js"></script>-->
+	</head>
+	<body>
+		<div class="update_bar">
+		<div class="update_center">
+			<div class="d">Apr 01, 2016</div>
+			<div class="update_text">最后更新 <span>9:00 AM, 30/03/2016</span></div>
+			<div class="right"><div class="mt_pic"></div><div>入驻 <span style="color: #ee3440;">3589</span> 家母婴自媒体 </div><div class="call_pic"></div><div>400-800-9090</div></div>
+			<span class="clearfix"></span>
+		</div>
+	</div>
+		<div class="head">
+			<div class="head_center">
+				<div class="head_open"><div></div></div>
+				<div class="head_tab">
+					<a  href="index.html">首页</a>
+					<a href="index.html" class="on_head_tab">母婴榜单</a>
+					<a href="index.html">母婴头条</a>
+					<a href="index.html">投放案例</a>
+					<a href="index.html">关于我们</a>
+				</div>
+			</div>
+		</div>
+		<div class="head1">
+			<div class="head1_center">
+				<div class="logo"></div>
+				<div class="right">
+					<div class="wx"></div>
+					<div class="wb"></div>
+					<div class="mail"></div>
+				</div>
+			</div>
+		</div>
+		<div class="search_filter">
+			<div class="search_bar">
+				<img class="search_pic2" src="images/search_gray.jpg" />
+				<input	type="text" id="search_bd" placeholder="请输入微信公众号ID、名称"/>
+				<div class="btn">搜索</div>
+				<span class="clearfix"></span>
+			</div>
+			<div class="filter_area">
+				<ul>
+					<li>
+						<div class="s_t color_666">标签资源</div>
+						<div class="no_condition">不限</div>
+						<div class="checkbox_list">
+							<input type="checkbox" value="">孕育知识类
+							<input type="checkbox" value="">亲子教育类
+							<input type="checkbox" value="">妈妈风尚类
+							<input type="checkbox" value="">健康饮食类
+							<input type="checkbox" value="">健康饮食类
+						</div>
+						<div class="duoxuan"><span style="font-size: 16px;">+</span>多选 </div>
+						<div class="more">更多 <span ></span>
+							<div class="hide_area">
+								<div>
+									<input type="checkbox" value="">孕育知识类
+									<input type="checkbox" value="">孕育知识类
+								</div>
+
+								<div>
+									<input type="checkbox" value="">孕育知识类
+									<input type="checkbox" value="">孕育知识类
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="s_t color_666">均阅读量</div>
+						<div class="no_condition">不限</div>
+						<div class="condition_list">
+							<div>2000以内</div>
+							<div>2000~5000</div>
+							<div>5000~10000</div>
+							<div>10000以上</div>
+						</div>
+					</li>
+					<li>
+						<div class="s_t color_666">粉丝数量</div>
+						<div class="no_condition">不限</div>
+						<div class="condition_list">
+							<div>10万以下</div>
+							<div>10万~20万</div>
+							<div>20万~50万</div>
+							<div>50万以上</div>
+						</div>
+					</li>
+					<li>
+						<div class="s_t color_666">推广价格</div>
+						<div class="no_condition">不限</div>
+						<div class="condition_list">
+							<div>2000以内</div>
+							<div>2000~5000</div>
+							<div>5000~10000</div>
+							<div>10000以上</div>
+						</div>
+					</li>
+					<li>
+						<div class="s_t color_666">宝宝年龄</div>
+						<div class="no_condition">不限</div>
+						<div class="condition_list">
+							<div>1-3岁</div>
+							<div>3-12岁</div>
+
+						</div>
+					</li>
+					<li>
+						<div class="s_t color_666">所处地域</div>
+						<div class="no_condition">不限</div>
+						<div class="condition_list">
+							<div>一线城市</div>
+							<div>二线城市</div>
+							<div>三线城市</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="has_condition">
+			<div class="con_pic"></div>
+			<div class="c">
+				<span>已选条件：</span>
+				<span class="condition">孕育知识类 </span>
+				<span class="condition">2000~5000 </span>
+			</div>
+			<div class="right">
+				共<span style="color: #ff4d4d;">200</span>个媒体满足条件
+				<div class="reset">
+					<div class="reset_pic"></div>
+					<div>重置搜索条件</div>
+				</div>
+			</div>
+		</div>
+		<div class="bd_list">
+			<div class="h">
+				<div class="h1">公众号</div>
+				<div class="h2">预估粉丝数</div>
+				<div class="h3">24小时阅读数</div>
+				<div class="h4">24小时点赞数</div>
+				<div class="h5">母婴指数</div>
+				<div class="h6">总榜趋势</div>
+				<div class="h7">
+					<div class="prev_arr no"></div>
+					<div><span style="color: #ee3440;">1 </span>/ 200</div>
+					<div class="next_arr"></div>
+				</div>
+			</div>
+			<ul>
+				<li>
+					<div class="gzh li_div1">
+						<img src="images/1.jpg" alt="">
+						<div>
+							<a href="#">母婴头条</a>
+							<p class="wxh">Qinziriji</p>
+							<div class="ewm_pic"></div>
+						</div>
+					</div>
+					<div class="fensi_num color_ff4d4d li_div2">2323</div>
+					<div class="read_count li_div3">10万+</div>
+					<div class="zan_count li_div4">2323</div>
+					<div class="my_z li_div5">232</div>
+					<div class="qs li_div6">20 <div class="down"></div></div>
+					<div class="li_div7">
+						<a class="book " href="javascript:void(0)">预约</a>
+					</div>
+
+				</li>
+				<li>
+					<div class="gzh li_div1">
+						<img src="images/1.jpg" alt="">
+						<div>
+							<a href="#">母婴头条</a>
+							<p class="wxh">Qinziriji</p>
+							<div class="ewm_pic"></div>
+						</div>
+					</div>
+					<div class="fensi_num color_ff4d4d li_div2">2323</div>
+					<div class="read_count li_div3">10万+</div>
+					<div class="zan_count li_div4">2323</div>
+					<div class="my_z li_div5">232</div>
+					<div class="qs li_div6">20 <div class="up"></div></div>
+					<div class="li_div7">
+						<a class="book " href="javascript:void(0)">预约</a>
+					</div>
+
+				</li>
+				<li>
+					<div class="gzh li_div1">
+						<img src="images/1.jpg" alt="">
+						<div>
+							<a href="#">母婴头条</a>
+							<p class="wxh">Qinziriji</p>
+							<div class="ewm_pic"></div>
+						</div>
+					</div>
+					<div class="fensi_num color_ff4d4d li_div2">2323</div>
+					<div class="read_count li_div3">10万+</div>
+					<div class="zan_count li_div4">2323</div>
+					<div class="my_z li_div5">232</div>
+					<div class="qs li_div6">20 <div class="up"></div></div>
+					<div class="li_div7">
+						<a class="book " href="javascript:void(0)">预约</a>
+					</div>
+
+				</li>
+			</ul>
+			<div class="fenye">
+				<a class="prev_btn btn no_more" href="#">上一页</a>
+				<a class="btn btn1 on_btn" href="#">1</a>
+				<a class="btn btn2" href="#">2</a>
+				<a class="btn btn3 " href="#">3</a>
+				<a class="btn btn4" href="#">4</a>
+				<a class="btn btn5" href="#">5</a>
+				<a class="btn btn6" href="#">6</a>
+				<a class="next_btn btn " href="#">下一页</a>
+				<div>共200页，到第 <input type="text" value="1"> 页 <a class="btn confirm" href="#">确认</a></div>
+				<span class="clearfix"></span>
+			</div>
+		</div>
+		<div class="foot">
+			<div class="foot_center">
+				<div class="hz">
+					<p class="t">
+						合作品牌
+					</p>
+					<p class="line_h_20">Nutrilon/诺优能   johnson/美赞臣   Friso/美素佳儿</p>
+					<p class="line_h_20">Wyeth/惠氏   Abbott/雅培   aptamil/爱他美</p>
+					<p class="line_h_20">BEINGMATE/贝因美   BIOSTIME/合生元伊利 </p>
+				</div>
+				<div class="mh">
+					<p class="t">媒体合作</p>
+					<div><div class="pic phone_pic "></div><div>T:  021-33312128</div><span class="clearfix"></span></div>
+					<div><div class="pic mail_pic"></div><div>M: jason@mgcc.com.cn</div><span class="clearfix"></span></div>
+				</div>
+				<div class="lw">
+					<p class="t">联系我们</p>
+					<div><div class="pic home_pic"></div><div>上海市制造局路584号F楼2-3楼</div><span class="clearfix"></span></div>
+					<div><div class="pic phone_pic"></div><div>T:  021-33312128</div><span class="clearfix"></span></div>
+					<div><div class="pic cz_pic"></div><div>F: 021-60932685</div><span class="clearfix"></span></div>
+				</div>
+				<div class="hot_word">
+					<p class="t">母婴热词云</p>
+					<div class="hot_word_area">
+						<a href="#">性格心理</a><a href="#">性格心理</a><a href="#">性格心理</a><a href="#">性格心理</a>
+					</div>
+				</div>
+				<span class="clearfix"></span>
+			</div>
+			<div class="foot1">
+				<div class="left_logo"><div></div></div>
+				<div class="right_c">
+					<div>
+						<p>Copyright © 母婴头条宝 上海母婴头条科技有限公司 </p>
+						<p>沪ICP备18888882号-2</p>
+					</div>
+					<div class="right l">
+						<div class="wx"></div>
+						<div class="wb"></div>
+						<div class="mail"></div>
+					</div>
+				</div>
+				<span class="clearfix"></span>
+			</div>
+		</div>
+		<!--预约弹窗 none类表示隐藏 删除none类就显示-->
+		<div class="book_area yuyue none">
+			<div class="book_area_head">
+				<img src="images/bb.png" alt="">
+				<div class="book_area_head_text">
+					<p>我要预约</p>
+					<p>APPOINTMENT</p>
+				</div>
+				<div class="close"></div>
+			</div>
+			<div class="content_head">
+				<div class="bg"></div>
+				<div class="bg1"></div>
+				<div class="text">
+					<img src="images/1.jpg" alt="" class="pic">
+					<div class="text_c">
+						<div class="left">
+							<p class="p1">母婴头条</p>
+							<p class="p2">微信号：qinziriji</p>
+							<p class="p3">简介：<span>关爱妈咪宝贝健康知识，了解最新母婴资讯，让您的宝宝快乐成长。</span></p>
+							<img src="images/line.jpg" alt="">
+							<p class="p4">
+								母婴指数 <span>784</span>  综合排名 <span>784</span>  实时排名 <span>784</span>
+							</p>
+						</div>
+					</div>
+
+					<span class="clearfix"></span>
+				</div>
+				<img src="images/ewm.jpg" alt="" class="ewm">
+				<div class="count">
+					<div class="c_1">
+						<div></div>
+						<p>6,000</p>
+					</div>
+					<div class="c_2">
+						<div></div>
+						<p>10万<span>+</span></p>
+					</div>
+					<div class="c_3">
+						<div></div>
+						<p>6120</p>
+					</div>
+				</div>
+			</div>
+			<form action="">
+				<div class="yuyue_info">
+					<ul>
+						<li>
+							<div>公司</div>
+							<input type="text">
+							<span>*</span>
+						</li>
+						<li>
+							<div>联系人</div>
+							<input type="text">
+							<span>*</span>
+						</li>
+						<li>
+							<div>电话</div>
+							<input type="text">
+							<span>*</span>
+						</li>
+						<span class="clearfix"></span>
+					</ul>
+					<div class="submit">
+						<div></div>
+					</div>
+					<span class="clearfix"></span>
+				</div>
+			</form>
+		</div>
+		<!--预约成功弹窗-->
+		<div class="book_area yuyue_success none">
+			<div class="book_area_head">
+				<img src="images/bb.png" alt="">
+				<div class="book_area_head_text">
+					<p>预约成功</p>
+					<p>SUCCESSFUL</p>
+				</div>
+				<div class="close"></div>
+			</div>
+			<div class="content_head">
+				<div class="bg">
+					<p>预约信息提交成功！</p>
+					<p>我们会在接受预约24小时内给予回复，感谢您对母婴头条宝的的支持！</p>
+				</div>
+				<div class="bg11">
+					<div class="left">
+						<div class="call_pic"></div>
+						<div>400-800-9090</div>
+					</div>
+					<div class="right">
+						<div class="wx"></div>
+						<div class="wb"></div>
+						<div class="mail"></div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<!--预约失败弹窗-->
+		<div class="book_area yuyue_fail none">
+			<div class="book_area_head">
+				<img src="images/bb.png" alt="">
+				<div class="book_area_head_text">
+					<p>预约失败</p>
+					<p>FAILED</p>
+				</div>
+				<div class="close"></div>
+			</div>
+			<div class="content_head">
+				<div class="bg">
+					<p>预约信息提交失败！</p>
+					<p>抱歉，预约信息提交失败，请重新预约。</p>
+				</div>
+				<div class="bg11">
+					<div class="left">
+						<div class="call_pic"></div>
+						<div>400-800-9090</div>
+					</div>
+					<div class="right">
+						<div class="wx"></div>
+						<div class="wb"></div>
+						<div class="mail"></div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="pop_bg none"></div>
+	</body>
+	<script>
+		var model={
+			height:document.documentElement.clientHeight,
+			width:document.documentElement.clientWidth,
+			yuyue:$(".yuyue"),
+			yuyue_success:$(".yuyue_success"),
+			yuyue_fail:$(".yuyue_fail"),
+			pop_bg:$(".pop_bg"),
+			init_pop_pos:function(){
+				this.yuyue.css({"top":(this.height-this.yuyue.height())/2+"px","left":(this.width-this.yuyue.width())/2+"px"});
+				this.yuyue_success.css({"top":(this.height-this.yuyue_success.height())/2+"px","left":(this.width-this.yuyue_success.width())/2+"px"});
+				this.yuyue_fail.css({"top":(this.height-this.yuyue_fail.height())/2+"px","left":(this.width-this.yuyue_fail.width())/2+"px"});
+
+			}
+		};
+		model.init_pop_pos();
+		$(".checkbox_list input,.hide_area input").on("click",function(){
+			if(!this.checked) return;
+			var check_text=this.nextSibling.nodeValue,con=$(".condition");
+
+			$(".c").append("<span class='condition'>"+check_text+"</span>");
+		});
+		$(".condition_list div").on("click",function(){
+			if($(this).attr("haschecked")!=1)
+			{
+				var check_text=$(this).html(),con=$(".condition");
+				$(this).attr("haschecked",1);
+				$(".c").append("<span class='condition'>"+check_text+"</span>");
+			}
+			else
+			{
+				$(this).attr("haschecked",0);
+			}
+		});
+		$(".reset").on("click",function(){
+			$(".c .condition").remove();
+		});
+		$(".search_filter .more").hover(function(){
+			$(".hide_area").show();
+		},function(){
+			$(".hide_area").hide();
+		});
+
+		//点击预约
+		$(".book ").on("click",function(argument) {
+			model.pop_bg.removeClass("none");
+			model.yuyue.removeClass("none");
+		});
+		//关闭弹窗
+		$(".close ").on("click",function(argument) {
+			model.pop_bg.addClass("none");
+			$(this).parents(".book_area").addClass("none");
+		});
+	</script>
+</html>

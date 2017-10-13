@@ -1,0 +1,13 @@
+.todoTask {
+  width: 100%;
+  border: 1px solid #D9DDE7;
+  //margin-top: 10px;
+  padding: 10px;
+  .todo_task_des{
+    margin: 10px 0;
+    color: #888;
+    span{
+      color: $global-primary;
+    }
+  }
+}

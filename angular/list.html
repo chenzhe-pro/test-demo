@@ -1,0 +1,7 @@
+<ul>
+    <li  ng-repeat="x in data" ng-click="clickLi($index)">
+    <p ng-bind-html="x.html|trustHtml"></p>
+    {{x.name}}
+    </li>
+</ul>
+<b>{{data}}</b>
